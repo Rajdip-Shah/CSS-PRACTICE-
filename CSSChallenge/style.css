@@ -1,0 +1,136 @@
+header{
+    background-color: #183030  ;
+}
+
+body {
+    background-color: #183030  ;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif; ;
+    color : #3FC1C9 ;
+    font-weight: 500 ;
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(223, 47, 47) ;
+}
+
+#Challenges{
+    display: flex;
+    flex-direction: column;
+    background-color: #65CCB8;
+    border-radius: 12px;
+    padding : 1px 20px ;
+    box-shadow: 0px 10px 40px;
+    font-family: 'Quicksand', sans-serif; ;
+    margin-left: 8%;
+    margin-right: 11%;
+}
+
+#ChallengeList li >input {
+    border-radius:30px;
+    border-color: #3FC1C9;
+    /* background-color:#3FC1C9; */
+}
+
+.SideBar {
+    display : flex ;
+    flex-direction: column ;
+    float: right;
+    width: 20%;
+    margin-right: 8%;
+    border-left: 2px solid black;
+    background-color: #116466;
+    margin-left: 50px ;
+    padding: 0px 10px ;
+    border-radius: 15px;
+    animation-name:SideBar-Slide ;
+    animation-duration: 2s ;
+}
+
+.SlideBar div {
+    margin-bottom:15px;
+}
+
+.SideBar h2{
+    color: rgb(241, 225, 80) ;
+    text-align: center;
+}
+
+.post p {
+    color : #FCF6F5FF;
+    text-align: center;}
+
+.postLINK{
+    text-decoration: none;
+    color: rgb(93, 141, 230);
+    align-items: center;
+}
+
+.postLINK:hover {
+    color: rgb(197, 27, 27);
+}
+
+
+.SideBar div{
+    border-bottom: 2px solid black ;
+    padding: 5px;
+    color: white;}
+
+.subtitle {
+    display: flex;
+    flex-direction: column;
+    padding : 10px;
+    background-color: #2F4454;
+    border-radius: 15px;
+    box-shadow: 0px 10px 40px;
+    margin-right: 3% ;
+    margin-left: 8%;
+}
+
+.subtitle h2{
+    animation-name: title-color-change;
+    animation-duration: 1s;
+}
+
+
+#image1 {
+    display: flex;
+    float: right;
+    width:20%;
+    margin: 5px;
+    box-shadow: 0px 10px 20px;
+}
+#image1:hover {
+    transform : scale(1.3) ;
+}
+
+.Topic-image {
+    margin : 2% 20%
+}
+.Topic-image img:hover{
+transform: scale(1.3) ;}
+
+@keyframes title-color-change {
+    0% {color: white;}
+    70% {color:rgb(216, 144, 148);}
+    100% {color: rgb(223, 47, 47) ;}
+}
+
+@keyframes SideBar-Slide {
+    0% {transform: translate(0px, -20px);}
+    100% {transform: translate(0px,0px );}
+}
+
+
+/* COLORS {
+    #89ABE3FF => LIGHT BLUE;
+    #333D79FF => DARK BLUE ; 
+    #990011FF => RED ;
+    #364F6B => GRAYISH BLUE;
+    #3FC1C9 => LIGHT BLUE 
+    #FCF6F5FF =>  WHITE 
+    #2D2926FF => BLACK
+} */

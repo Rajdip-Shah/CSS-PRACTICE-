@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+    /* background-image: url('https://img.wallpapersafari.com/desktop/1366/768/13/97/iErzIG.jpg'); */
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/805760119554119.60a905de91e80.jpg');
+    background-size : cover;
+    Background-repeat: no-repeat;
+    margin : 0px;
+}
+
+header,  .Navigation-Bar{
+    background-color: #3E2C41;
+    display: flex;
+    align-items: center; 
+    height : 40px;
+    color: #BDEBED;
+}
+
+#protech {
+    flex: 1 1 30%;
+    cursor: pointer;
+    letter-spacing:2px;
+    padding : 0 5%;
+    font-size: 30px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+#pfp {
+    height: 30px;
+    border-radius: 40px;
+    align-items: center;
+}
+
+.Navigation-Bar{flex: 1 1 40%; justify-content:flex-end;}
+
+.Navigation-Bar div, .Navigation-Bar a {
+    padding : 2px 10px ;
+    color: #BDEBED;
+    text-decoration: none;
+}
+
+.Navigation-Bar a:hover {
+    color : #93ced1;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+.landing-text {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    /* justify-content: center; */
+    margin: auto;
+    align-items: center;
+    /* outline: auto; */
+    width: 82%;
+}
+
+#main-heading{
+    grid-column : 1/4;
+    grid-row : 1/-1;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    text-align: center;
+    align-self: center;
+    color : #FBF37C;
+    /* outline: auto; */
+}
+
+#sub-heading{
+    grid-column : 4/-1;
+    grid-row : 1/4;
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+    align-self: end;
+    justify-self: center;
+    /* outline: auto; */
+
+    color : #FBF37C;
+}
+
+#third-heading{
+    grid-column : 4/-1;
+    grid-row : 3/-1;
+    font-family: 'Comfortaa', cursive;
+    font-size: 8px;
+    align-self: center;
+    /* outline: auto; */
+
+    color : #FBF37C;
+}

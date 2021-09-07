@@ -1,0 +1,125 @@
+body {
+    margin: 0px ;
+    background-color: #19181A;
+}
+
+.grid-parent{
+    display : grid;
+    outline: auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    /* grid-auto-rows: 100px; */
+    grid-auto-rows: minmax(100px, auto);
+
+    /* justify-items: center;
+    justify-items: start;
+    justify-items: end; */
+    justify-items: stretch; /*DEFAULT*/
+}
+
+.grid-parent div{
+    outline: auto;
+    color: #fff;
+    padding: 10px;
+}
+
+
+.landingpage-text {
+    display: grid; 
+    outline: auto;
+    grid-template-columns: repeat(5, 1fr);
+    margin: auto;
+    width: 60%;
+    color : #fff;
+}
+
+#title {
+    grid-row : 1/3 ;
+    grid-auto-rows: minmax(200px, auto);
+    align-self: center;
+    text-align: center;
+    padding: 2px 15px;
+    font-size: 25px;
+    outline: none;
+    border-right: 2px solid #fff;
+}
+#subtitle {
+    justify-self: start;
+    grid-column : 2/-1 ;
+    grid-auto-rows: minmax(100px, auto);
+    align-self: end;
+    padding: 0px 15px;
+    outline: none;
+    font-size: 15px;
+}
+#sub-paragraph {
+    justify-self: start;
+    grid-column : 2/-1 ;
+    align-self: start;
+    padding: 0px 15px;
+    outline: none;
+    font-size: 12px;
+}
+/* ------------------------------------------------------------------------------------ */
+.number-pallet {
+    display:  grid ;
+    background-color: rgb(62, 91, 255); 
+    text-align: center;
+    /* grid-template-columns: repeat(7, 100px); */
+    /* grid-template-columns: repeat(7, 1fr); */
+
+    /* auto-fit tries to fillup the grid with as many grid as possible
+     until there's not enough space to ad a new column */
+    /* grid-template-columns: repeat(auto-fit, 1fr);  */
+    /* grid-template-columns: repeat(auto-fit, 100px);  */
+
+    /* the columns will alwys be 200 pixels, if the screen gets smaller,
+     it will move to another row and if if the screen gets bigger, 
+     it will stretch each column to fill the grid*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-template-rows: 100px 100px;
+    grid-auto-rows: 100px;  /* make sure all rows are atleast 100px */
+}
+
+.number-pallet  div:nth-child(odd){
+    background-color: rgb(0, 38, 255);
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.image-gallery{
+    display: grid ;
+    grid-gap: 5px ;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+    grid-auto-flow: dense;
+    outline: auto;
+}
+
+.image-gallery div{
+    object-fit: scale-down ;
+    /* outline: auto; */
+}
+
+.horizontal{
+    grid-column: span 2;
+    /* outline: auto; */
+    object-fit: scale-down ;
+}
+
+.big {
+    grid-column : span 2;
+    grid-row : span 2;
+    /* outline: auto; */
+    object-fit: scale-down ;
+
+}
+
+.vertical {
+    grid-column : span 1;
+    grid-row : span 2;
+    /* outline: auto; */
+    object-fit: scale-down ;
+
+}

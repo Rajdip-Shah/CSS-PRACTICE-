@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=, initial-scale=1.0"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>CHALLENGES</title>
+</head>
+<body >
+    <script src="home.js"></script>
+    <br/>
+    <div class="container age">
+        <h2>Challenge 1: Your age in day </h2>
+        <div class = "button"> 
+            <div>
+                <button class="btn btn-success" onclick="ageInDays()">ClickMe</button>
+            </div>  
+            <div>
+                <button class="btn btn-success" onclick = "reset()">Reset</button>
+            </div>
+        </div>
+        <div class="result-1" id= "result-box"> 
+
+        </div>
+    </div>
+    <br/><br/>
+
+    <div class="container">
+        <br/>
+        <h2>Challenge2: Get Random Pic</h2><h5>From THE INTERNET</h5>
+        <div class = "button">
+            <div>
+                <button class="btn btn-success" onclick="GetImg()">GET PICS</button>
+            </div>
+        </div>
+        <div class = "result-2" id="GenerateImg"></div>
+        <p id="try" > </p>
+    </div>
+    <br/><br/>
+
+
+    <div class = "container"> 
+        <br/>
+        <h2> Challenge 3: Rock, Paper, Scissors</h2>
+        <div class="button" id = "dis">
+            <div class="RPSbutton" id="Options">
+                <img id = "Rock"src="https://pngimage.net/wp-content/uploads/2018/06/rocha-desenho-png-1.png" onclick="RPSgame(this)" width= 100px />
+                <img id = "Paper" src="C:\Users\User\Downloads\Paper.jpg" onclick="RPSgame(this)" width= 100px />
+                <img id = "Scissor" src= "C:\Users\User\Downloads\Scissor.png" onclick="RPSgame(this)" width= 100px />
+            </div>  
+        </div>
+        <div class="button">
+            <button class="btn btn-danger" onclick="again()" >AGAIN</button> 
+        </div>
+    </div>
+    <br/><br/>
+
+    <div class="container bj">
+        <br/>
+        <h2>Challenge 4: Black Jack</h2> 
+        <h3> <span id = "gameResult" > <!-- Let's Play -->
+            Let's play
+        </span></h3>
+
+        <div class = "BJPlayBox"> <!-- The green Background  -->
+            <div id = "UserBox"> <!-- YOU -->
+                <h3>YOU: <span id = "yourScore" >0</span></h3>
+     
+            </div> 
+
+            <div id = 'DealerBox'>  <!-- BOT -->
+                <h3>DEALER: <span id = "dealerScore">0</span></h3>
+            </div>
+        </div>
+
+    <!--PLAY BUTTONS  -->
+        <div class="playButtons"> 
+            <button id = "hitButton" class="btn btn-primary btn-lg mr-5" onclick="BJhit()"> HIT</button>
+            <button id = "standButton" class="btn btn-success btn-lg mr-5" onclick = "dealerBot()"> STAND</button>
+            <button id = "dealButton" class="btn btn-danger btn-lg " onclick="deal()"> DEAL</button>
+        </div>
+        
+        <div class = "score"> <!-- PLAYER SCORES  -->
+            <table> 
+                <tr>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Draw</th>
+                </tr>
+                <tr>
+                    <td><span id = "wins">0</span></td>
+                    <td><span id = "losses">0</span></td>
+                    <td><span id = "draw">0</span></td>
+                </tr>
+            </table>
+        </div> 
+    </div>
+    <br/><br/>
+</body>
+</html> 

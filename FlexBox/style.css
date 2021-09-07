@@ -1,0 +1,60 @@
+body {
+    background : #222C2A ;
+    padding: 2em; 
+}
+
+* {
+    color : white ;
+}
+
+.flex-box {
+    display : flex;
+}
+
+.flex-box > div{
+    display : flex;
+    flex-wrap : wrap;
+
+}
+
+.main-content div {
+    background-color : #433334;
+    margin : 0.3em 0.6em ; 
+    padding : 1em ;
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+
+.sidebar {
+    flex-direction: column-reverse;
+    background-color : #484848;
+    margin : 0em 1em ;
+    padding : 0.5em 1em;
+    flex-basis : calc(calc(150px - 100%) * 9999);
+    flex-grow: 0.4 ;
+}
+
+/* =======================================================================================================*/
+.manage-font {
+    display : block ;
+    background-color : #D3EED9;
+    padding : 1em ;
+    border-radius: 1em ;
+    box-shadow: 0px 0px 20px;
+}
+
+.manage-font:hover {
+    box-shadow: 0px 0px 10px;
+}
+
+.manage-font h2 {
+    color: #824936;
+    text-align : center;
+    padding-left : 0.5;
+}
+.manage-font p {
+    color: #222C2A; 
+    padding: 0em 0.7em;
+    font-size : clamp( 10px, 20px, 30px )
+}
+

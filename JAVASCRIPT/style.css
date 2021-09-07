@@ -1,0 +1,122 @@
+body {
+    background-color: #2F4454;
+}
+
+.container.bj{
+    display: flex;
+    flex-direction: column;
+    background-color: #116466;
+    padding: 10px ;
+    width : 80%;
+    margin: 0 auto;
+    text-align: center;
+    color : #C8F7E8;
+    border-radius: 25px ;
+    font-family:'Lato', sans-serif;
+    animation-name:slide ;
+    animation-duration: 2s ;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #116466;
+    padding: 10px ;
+    width : 50%;
+    margin: 0 auto;
+    text-align: center;
+    color : #C8F7E8;
+    border-radius: 25px ;
+    font-family:'Lato', sans-serif;
+    animation-name:slide ;
+    animation-duration: 2s ;
+}
+
+
+.button, .result-1,.score {
+    display : flex ;
+    padding: 1px;
+    flex-wrap: wrap ;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.buttonlook
+
+.button div{
+    margin: 10px ; 
+    align-items: center;
+}
+
+.button button{
+    padding: 3px 9px;
+    border-radius: 25px ;
+    background-color: #116466;
+    border-color: #3aff9c;
+    border-style: solid;
+    color: #3aff9c;
+}
+
+.button button:hover{
+    background-color: #3aff9c;
+    color :#116466;
+    transform: translate(2px, 2px);
+}
+
+.img-result, .result-2 img{
+    margin: 10px ;
+    justify-content: space-around;
+    box-shadow: 0px 10px 40px;
+}
+
+.RPSbutton {
+    display : flex ;
+    padding: 10px;
+    justify-content: space-around;
+}
+.RPSbutton img:hover{
+    box-shadow: 0px 10px 40px rgb(82, 34, 192);
+    margin: 2px;
+}
+
+.BJPlayBox{
+    display : flex ;
+    border: 1px solid black;
+    padding: 10px;
+    flex-wrap: wrap ;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 470px;
+    color : white;
+    background: url("https://media.istockphoto.com/photos/green-poker-background-picture-id453187915?k=6&m=453187915&s=612x612&w=0&h=kB43IY-gj4jbxw-_gxsXK11ar2kR8JJjxLX-aXTvjdQ=") center;
+}
+
+.BJPlayBox div {
+        flex: 1;
+        border: solid black;}
+
+.playButtons{
+    display : flex ;
+    flex-wrap: wrap ;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px ;
+    background: url("https://media.istockphoto.com/photos/green-poker-background-picture-id453187915?k=6&m=453187915&s=612x612&w=0&h=kB43IY-gj4jbxw-_gxsXK11ar2kR8JJjxLX-aXTvjdQ=") center;
+}
+
+
+.BJPlayBox img{
+    height: 150px;
+    padding: 10px;
+}
+
+
+table, th, td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+@keyframes slide {
+    0% {transform: translate(0px, -20px);}
+    100% {transform: translate(0px,0px );}
+}

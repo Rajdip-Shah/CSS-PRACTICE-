@@ -1,0 +1,16 @@
+.colors  {
+    display: inline-block;
+}
+.colors div {
+    display: inline-block;
+    height : 100px;
+    width :200px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Montserrat:400,700|Seymour+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Seymour+One&display=swap');
+#Montserrat p{
+    font-family : "Montserrat";
+}
