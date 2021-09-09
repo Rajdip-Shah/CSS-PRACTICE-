@@ -4,7 +4,8 @@
 
 body {
     /* background-image: url('https://img.wallpapersafari.com/desktop/1366/768/13/97/iErzIG.jpg'); */
-    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/805760119554119.60a905de91e80.jpg');
+    /* background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/805760119554119.60a905de91e80.jpg'); */
+    background-image: url('C:\\Users\\User\\Desktop\\WebDev\\Images\\1.jpg');
     background-size : cover;
     Background-repeat: no-repeat;
     margin : 0px;
@@ -43,6 +44,10 @@ header,  .Navigation-Bar{
 
 .Navigation-Bar a:hover {
     color : #93ced1;
+}
+
+.landing-page {
+    background-image : url('"C:\\Users\\User\\Desktop\\WebDev\\Images\\3.jpg"');
 }
 
 /* ------------------------------------------------------------------------------------ */
