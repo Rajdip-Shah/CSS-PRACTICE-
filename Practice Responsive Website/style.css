@@ -1,0 +1,17 @@
+body {
+    margin : 0 clamp(0.5em, 5vw, 4em);
+}
+
+.text-box-1 {
+    background-color: rgb(53, 90, 97);
+    padding: 0.5em 2em ; 
+    width : 0 auto ;
+}
+
+h2{
+    font-size: clamp(35px, 5vw, 50em);
+}
+
+p{
+    font-size : clamp(20px, 3vw, 25px)
+}
