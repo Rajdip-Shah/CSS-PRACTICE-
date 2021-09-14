@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gafata&display=swap');
+
+body{
+    margin : 0;
+    background-color: none;
+    font-family: 'Gafata', sans-serif;
+}
+body *{
+    outline:none;
+    /* margin : 0px; */
+}
+header {
+    display: flex;
+    background: #222C2A;
+    padding : 0px  clamp(10px, 5vw, 100px);
+    align-items: center;
+    color:#fff;
+    justify-content: space-between;
+}
+
+.nav-heading {
+    letter-spacing : 3px;
+    font-weight : bold;
+    margin: 0px;
+    cursor: pointer;
+}
+
+header .nav{
+    justify-self: flex-end;
+
+}
+
+.nav  {
+    display : flex;
+    justify-self: flex-end;
+}
+
+nav * {
+    margin: 0em;
+}
+
+nav p:hover {
+    color: #ff0000;
+    font-weight : bold;
+}
+
+nav {
+    display : flex;
+    justify-content: space-between;
+    letter-spacing:2px;
+    color: white;
+}
+
+#search-box{
+    border: 1px solid #58555A;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #58555A;
+    color: white;
+    padding: 3px 0px;}
+
+
+#search-box::placeholder{
+    color : #ccb0b0 ;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#search-box:hover {
+    border-bottom: 2px solid #ff0000;
+}
+
+#book {
+    margin : 0px clamp(1em, 5vw, 5em);
+}
+
+.landingpage {
+    display : flex;
+    /* justify-content: center; */
+    /* flex-direction: row; */
+}
+
+.landingpage > div {
+    padding : clamp(3rem,5vw, 5rem);
+    line-height : minmax(38px, 45px);
+    /* height : 400px; */
+    margin: 0px ; 
+}
+
+.left {
+    background :  #D3EED9;
+    flex : 1 1 60%;
+    font-size: clamp(25px, 5vw, 40px);
+    font-family:'Gafata', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #824936;
+}
+
+.left *{
+    margin: 0px;
+}
+
+#review-btn {
+    border: #824936;
+    background-color: #824936;
+    padding : 0.4em 1em ; 
+    border-radius: 8px;
+    font-family:'Gafata', sans-serif;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+}
+
+.right {
+    flex : 1 1 40%;
+    background-color: #824936;
+}
+
+.mailing-list-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #ebf3f2;
+    margin : auto;
+    border-radius: 8px;
+    padding:50px 30px;
+    text-align: center;
+    max-width : 280px
+}
+
+.mailing-list-container *{
+    margin: auto;
+}
+
+.mailing-list.heading{
+    font-size: 33px;
+}
+
+.mailing-list.sub-heading{
+    font-size:smaller;
+    margin-bottom:1em;
+}
+
+#input-email, #submit-email {
+    font-family:'Gafata', sans-serif;
+    font-size: 15px;
+    border-style: solid;
+    /* border: 10px; */
+    border-color : #824936;
+    border-radius: 7px;
+    text-align : center;
+    padding : 3px 13px;
+    margin-bottom:1em;
+    max-width : 180px;
+}
+
+#input-email{
+    color: #000000;
+    background-color: #fff;
+}
+
+#submit-email {
+    background-color: #824936;
+    color: #fff;
+}
+
+#submit-email:hover {
+    background-color: #97614f;
+    transform: translate(1px, 1px)
+}
+
+@media (max-width: 580px) {
+    .landingpage {
+        flex-direction : column;
+    }
+    .mailing-list-container{
+        max-width :200px;
+    }
+    .left {
+        padding : 8rem 3rem;
+    }
+}
