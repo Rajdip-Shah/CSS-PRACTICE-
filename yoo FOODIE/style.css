@@ -10,21 +10,23 @@
     letter-spacing:0.01em;
     scroll-behavior: smooth;
     font-size: 1em;
+    outline: none;
 }
 
 body {
     min-height: 2000px;
+    position: relative;
 }
 
 h2{
     font-weight :  600;
     letter-spacing:1px;
-    font-size : 2.5em ;
+    font-size : clamp(1.5em, 10vw, 2.5em );
 }
 
 p{
     font-weight: 300;
-    font-size: clamp(1em, 3vw, 1.2em);
+    font-size: clamp(0.9em, 3vw, 1.2em);
 
 }
 
@@ -47,26 +49,27 @@ section {
 }
 
 
-/* --------------------------------------------------------------------------------- */
+/* ---------------------NAVIGATIONBAR------------------------------------------------------------ */
 
 
 header {
     position: fixed;
     top: 0;
     left : 0;
-    width : 100%;
+    min-width : 100vw;
     padding : 0px clamp(30px, 5vw, 60px);
     padding-bottom: 50px;
     z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.5s ; 
     animation : scale-up 0.5s;
 }
 
 header.scroll {
     background-color : #fff;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     box-shadow: 0px 50px 20px rgba(0, 0, 0, 0.05);
     transition: 0.5s ;
     animation : scale-up 1s;
@@ -76,9 +79,16 @@ header h1 a {
     letter-spacing: 2px;
     font-size: 25px;
     font-weight: 700;
+    transition: 0.5s ; 
 }
-.scroll h1 a {
+header.scroll h1 a {
     color :rgb(30, 32, 32);
+    transition: 0.5s ; 
+}
+
+header nav{
+    display: flex ;
+    color: #fff;
 }
 
 
@@ -109,7 +119,58 @@ nav ul *:hover{
 }
 
 
-/* --------------------------------------------------------------------------------- */
+/* ---------------------toggle BAR------------------------------------------------------------ */
+
+
+
+header .menu-btn {
+    display: none;
+    transition: 0.5s;
+    margin-right: 2em;
+}
+
+header .menu-btn.open {
+    position: fixed;
+    top: 0;
+    right: 0 ; 
+    z-index: 9999;
+    margin: 0;
+    justify-content: center;
+    display:flex;
+    flex-direction : column;
+    align-items: center;
+    width: 130px;
+    /* width:fit-content; */
+    height: 100vh;
+    background-color: #fff;
+    display: none ;
+}
+
+
+.navigation.navopen {
+    display: flex ;
+    flex-direction : column;
+    margin-top : 30px;
+}
+
+nav.navopen ul {
+    display: flex;
+    flex-direction : column;
+}
+
+.menu-btn.open nav.navopen ul li{
+    color : rgb(30, 32, 32);
+    text-align: center;
+    margin-left: 0px;
+}
+
+
+.toggle-button:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+/* ------------LANDING PAGE --------------------------------------------------------------------- */
 
 
 .cover-title{
@@ -154,18 +215,26 @@ nav ul *:hover{
 }
 
 
-/* --------------------------------------------------------------------------------- */
+/* ---------------ABOUT US ------------------------------------------------------------------ */
 
 section .about-container{
     display : flex ; 
     max-width : 1200px ; 
     margin: auto;
     align-items: center;
-    justify-content: space-between;
 }
 
 .about-container .text{
     flex: 1 1 50%;
+    margin-right: 1em;
+}
+
+.about-container .text h2{
+    margin-bottom: 0.3em;;
+}
+
+.about-container .text p {
+    font-size : 1em;
 }
 
 .about-container .img {
@@ -178,10 +247,30 @@ section .about-container{
     object-fit: cover;
 }
 
+@media (max-width: 700px){
+    .about-container .text h2{
+        text-align: center;
+    }
 
-/* --------------------------------------------------------------------------------- */
+    .about-container .text p{
+        text-align: center;
+    }
 
-.menu {
+    .about-container .text{
+        flex:1 1 100%;
+    }
+    .about-container .img img{
+        display: none;
+    }
+    .about-container .img {
+        display: none;
+    }
+
+}
+
+/* ---------MENU------------------------------------------------------------------------ */
+
+section.menu {
     background-color: #f4f0e4;
     text-align:center 
 }
@@ -197,14 +286,17 @@ section .about-container{
     margin: 10px;
     background-color: #fff;
     transition: 0.5s;
+    max-width: clamp(250px, 30vw, 370px);
 }
 
 .menu-card .dish-name {
     font-weight: 500;
+    font-size: clamp(1em, 5vw, 1.2em)
 }
 
 .menu-card img {
-    max-width: clamp(350px, 5vw, 400px);
+    width: 100%;
+    object-fit: cover ;
 }
 
 .menu-card:hover {
@@ -217,26 +309,234 @@ section .about-container{
     color: #fff;
     font-weight: 500;
     margin-top: 10px;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 /* ----------------------------------REVIEWS----------------------------------------------- */
 
 
 .review{
-    background-image: url("images\\bg2.jpg");
+    background-color : #1d1d1d;
     color : #fff;
 }
 
+.heading {
+    text-align : center;
+    margin-bottom : 30px ; 
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #46332e;
+    max-width: 400px;
+    min-width : 230px;
+    align-items: center;
+    padding : 1.2em;
+    margin-left : 15px;
+    margin-bottom : 15px;
+    text-align : center;
+    flex: 1;
+}
+
+.review-card *{
+    margin-bottom : 0.4em;
+}
+
+.review-card :nth-child(2){
+    font-size: 1.05em;
+    font-style: italic;
+    padding-bottom: 5px;
+}
+
+.review-card .name {
+    position: absolute ;
+    align-self: flex-end;
+    font-size : 0.93em;
+    color : rgb(192, 189, 189);
+    bottom: 5px;
+}
+
+.review-card img {
+    max-width: 120px;
+    object-fit: cover ;
+    border-radius: 100%;
+}
 
 
+/* ----------------------------------SignUp----------------------------------------------- */
+
+section.signup {
+    background-color: #f4f0e4;
+    padding : 2em 1em;
+}
+
+.signup-container {
+    background-color: #f3efe2;
+    padding : 3em ;
+    max-width:max-content;
+    margin: auto ;
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2)
+}
+
+.title {
+    text-align : center;
+}
 
 
+.title p{
+    font-size : 1em ;
+    color: #222C2A;
+}
+
+.email-input {
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-input input[type = email]{
+    border-color: #ff0157;
+    border-radius: 8px ; 
+    padding : 5px 10px ;
+    background-color: #fff;
+    width: clamp(225px, 20vw, 250px);
+    text-align: center;
+    margin-top : 10px ; 
+}
+
+.email-input input[type = email]::placeholder{
+    text-align : center ; 
+}
+
+.email-input input[type = submit]{
+    background-color: #ff0157;
+    border: none;
+    padding: 5px 15px;
+    max-width : 150px;
+    color : #fff;
+    margin-top : 10px ;
+    letter-spacing : 1px;
+    transition: 0.5s; 
+}
+
+.email-input input[type = submit]:hover{
+    letter-spacing: 5px;
+}
+/* ----------------------------------Nav Toggle----------------------------------------------- */
+
+  .menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+    transition: background 0.1s ease-in-out;
+  }
+  .menu-btn__burger {
+    width: 40px;
+    height: 5px;
+    background: rgb(30, 32, 32);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all 0.6s ease-in-out;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background-color: rgb(30, 32, 32);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all 0.8s ease-in-out;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-12px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(12px);
+  }
+  /* ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
 
 
+/* ----------------------------------navigation Toggle----------------------------------------------- */
 
 
+@media (max-width:675px){
 
+    header, header.scroll {
+        padding : 5px 10px;
+        padding-top : 0px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav ul *{
+        color: rgb(30, 32, 32);
+    }
+
+    header .menu-btn .menu-btn__burger,
+    header .menu-btn .menu-btn__burger::after, 
+    header .menu-btn .menu-btn__burger::before{
+        background-color: #fff;
+    }
+
+    header.scroll .menu-btn .menu-btn__burger,
+    header.scroll .menu-btn .menu-btn__burger::after, 
+    header.scroll .menu-btn .menu-btn__burger::before{
+        background-color: rgb(30, 32, 32);
+    }
+
+    header.scroll .menu-btn.open .menu-btn__burger::after, 
+    header.scroll .menu-btn.open .menu-btn__burger::before{
+        background-color: #ff0157;
+    }
+
+    .menu-btn.open .menu-btn__burger::before,
+    .menu-btn.open .menu-btn__burger::after {
+        background-color : #ff0157;
+    }
+
+    header.scroll .menu-btn.open .menu-btn__burger{
+        background-color: transparent;
+    }
+
+
+    header .menu-btn {
+        display: flex;
+    }
+
+    header .menu-btn.open {
+        display: flex ; 
+    }
+
+}
 
 
 /* ----------------------------------ANIMATION----------------------------------------------- */

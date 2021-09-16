@@ -10,22 +10,35 @@
 <body>
     <header>
         <h1 class = "logo"><a href="#cover-title">YOO PIZZA <span>.</span> </a> </h1>
-        <nav>
+        <div class="menu-btn" onclick="menuToggle()">
+            <div class="toggle-button">
+                <div class="menu-btn__burger"></div>
+            </div>
+            <nav class = "navigation">
+                <ul>
+                    <li class = "nav-link" id = "ABOUT"><a href="#about">ABOUT</a></li>
+                    <li class = "nav-link" id = "MENU"><a href="#menu">MENU</a></li>
+                    <li class = "nav-link" id = "REVIEW"><a href="#review">REVIEW</a> </li>
+                    <li class = "nav-link" id = "#SignUp"><a href="#signup">SIGNUP</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class = "navigation">
             <ul>
                 <li class = "nav-link" id = "ABOUT"><a href="#about">ABOUT</a></li>
                 <li class = "nav-link" id = "MENU"><a href="#menu">MENU</a></li>
-                <!-- <li class = "nav-link" id = "GALLERY"><a href="#gallery">GALLERY</a> </li> -->
                 <li class = "nav-link" id = "REVIEW"><a href="#review">REVIEW</a> </li>
-                <li class = "nav-link" id = "ORDER"><a href="#order">ORDER</a></li>
+                <li class = "nav-link" id = "#SignUp"><a href="#signup">SIGNUP</a></li>
             </ul>
         </nav>
+
     </header>
 
     <section class = "cover-title" id = "cover-title" >
         <div class = "content">
             <h2>CHOOSE THE BEST</h2>
             <p>We make the healthiest pizza. We are friendly 🙂. VERY FRIENDLY. It's so yummy that u, mate, are going to spend the rest of the day takin a shit. And sice we care a lot about you, we provide free diapers of every size.</p>
-            <a class = "btn"href="">MENU</a>
+            <a class = "btn"href="#menu">MENU</a>
         </div>
     </section>
 
@@ -79,26 +92,39 @@
 
      <section class="review" id="review">
          <div class="review-container">
-             <div heading> 
+             <div class = "heading"> 
                  <h2>What they say about us</h2>
              </div>
              <div class = "main">
                  <div class = "review-card">
                      <img src="images\\deadpool.jpg" alt="PEOPLE PIC">
-                     <p></p>
-                     <p class="name"></p>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consequatur commodi magni. Sed exercitationem nesciunt natus, distinctio ex voluptas fugit excepturi cumque. Labore repellendus dolore eos accusamus magni. Accusantium, tenetur!</p>
+                     <p class="name">-Patrisha</p>
                  </div>
                  <div class = "review-card">
                      <img src="images\\harry potter.jpg" alt="PEOPLE PIC">
-                     <p></p>
-                     <p class="name"></p>
+                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quaerat quidem ullam iure nisi magnam nostrum, perspiciatis voluptatibus dolore nesciunt obcaecati corporis sequi ducimus culpa.</p>
+                     <p class="name">-Yer a Wizerd</p>
                  </div>
                  <div class = "review-card">
                      <img src="images\\trump.jpg" alt="PEOPLE PIC">
-                     <p></p>
-                     <p class="name"></p>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quibusdam quod praesentium, debitis aliquid ipsa in dolores ipsam deserunt velit eligendi accusantium odio nam vel numquam harum illo saepe laborum?</p>
+                     <p class="name">-DoDooLuDoo</p>
                  </div>
              </div>
+         </div>
+     </section>
+
+     <section class="signup" id="signup">
+         <div class="signup-container">
+             <div class="title">
+                 <h2>Join The Mailing List</h2>
+                 <p>Get notified about discount offers and new packages</p> 
+             </div>
+             <div class="email-input">
+                 <input type="email" placeholder="your @mail"></input>
+                 <input type = "submit" value = "JOIN">
+            </div>
          </div>
      </section>
 

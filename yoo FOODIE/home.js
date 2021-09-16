@@ -12,4 +12,11 @@ window.addEventListener("scroll",
         var navBar = document.getElementsByTagName('HEADER')
         navBar[0].classList.toggle('scroll',window.scrollY>0 )
         }
-)
+    )
+
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.getElementsByTagName('nav');
+function menuToggle(){
+    menuBtn.classList.toggle('open');
+    navLinks[0].classList.toggle('navopen');
+}
