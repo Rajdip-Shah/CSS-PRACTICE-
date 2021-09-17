@@ -126,7 +126,7 @@ nav ul *:hover{
 header .menu-btn {
     display: none;
     transition: 0.5s;
-    margin-right: 2em;
+    margin-right: 1em;
 }
 
 header .menu-btn.open {
@@ -234,7 +234,7 @@ section .about-container{
 }
 
 .about-container .text p {
-    font-size : 1em;
+    font-size : 1.1em;
 }
 
 .about-container .img {
