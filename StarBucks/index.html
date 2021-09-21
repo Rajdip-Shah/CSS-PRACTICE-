@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Starbucks</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+
+        <header>
+            <a href="#home" class = "logo"> <img src = "images\\logo.png"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <div class = "content">
+            <div class = "textbox">
+                <h2>It's not just coffee<br> It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, incidunt mollitia autem perferendis eos quibusdam explicabo quam nulla nemo sapiente, aut animi obcaecati ipsam pariatur necessitatibus quis esse doloribus quia.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imagepic" id="imagepic">
+                <img class = "mainpic"src="images\\green.png" alt="Coffee image">
+            </div>
+        </div>
+
+        <div class="options" id="options">
+            <ul>
+                <li><img src="images\\thumb1.png" alt="coffe image" onClick = "imgSlider('images\\green.png'); changeCircleColor('#007340')"></li>
+                <li><img src="images\\thumb2.png" alt="coffe image" onClick = "imgSlider('images\\Cream.png'); changeCircleColor('#eb7495')"></li>
+                <li><img src="images\\thumb3.png" alt="coffe image" onClick = "imgSlider('images\\pink.png'); changeCircleColor('#d752b1')"></li>
+            </ul>
+        </div>
+
+        <div class="socials">
+            <ul>
+                <li><img src="images\\fb.png" alt="social logos"></li>
+                <li><img src="images\\Insta.png" alt="social logos"></li>
+                <li><img src="images\\twitter.png" alt="social logos"></li>
+            </ul>
+        </div>
+    </section>
+
+    <script src = "main.js"></script>
+</body>
+</html>

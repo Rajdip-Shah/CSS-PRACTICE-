@@ -20,14 +20,14 @@
     </div>
     <nav class = "Navigation-Bar">
         <div id = "download">   
-            <a id = "grid"href = "C:\Users\User\Desktop\PROGRAMMING -VS code\WEBDEV PROJECTS\Grid and Floats\index.html" data-tool-kit = "Yop This is Yo gRID wEbSite">GRID </a>
+            <a id = "grid"href = "C:\\Users\\User\\Desktop\\PROGRAMMING -VS code\\WEBDEV PROJECTS\\Grid and Floats\\index.html" data-tool-kit = "Yop This is Yo gRID wEbSite">GRID </a>
         </div>
 
         <div id = "answered-questions">   
             <a href = "file:///C:/Users/User/Desktop/PROGRAMMING%20-VS%20code/WEBDEV%20PROJECTS/WHOLEASS%20WEBSITE/index.html#">MAIN WEBSITE</a>
         </div>
         <div id = "answered-questions">   
-            <a href = "C:\Users\User\Desktop\PROGRAMMING -VS code\WEBDEV PROJECTS\The Travel Website\index.html">TRAVEL WEBSITE</a>
+            <a href = "C:\\Users\\User\\Desktop\\PROGRAMMING -VS code\\WEBDEV PROJECTS\\The Travel Website\\index.html">TRAVEL WEBSITE</a>
         </div>
         <div id = "YourAccount">   
             <a href = "#">
@@ -35,18 +35,46 @@
             </a>
         </div>
         <div id = "YourAccount">   
-            <a href = "C:\Users\User\Desktop\PROGRAMMING -VS code\WEBDEV PROJECTS\FlexBox\index.html">
+            <a href = "C:\\Users\\User\\Desktop\\PROGRAMMING -VS code\\WEBDEV PROJECTS\\FlexBox\\index.html">
                 FLEX-BOX
             </a>
         </div>
     </nav>
 </header>
-<!-- -----------------------------Navigation--------------------------->
+<!-- -----------------------------3D flip card --------------------------->
+<section >
+    <div class="card">
+        <div class = "face front">
+            <h2>Front</h2>
+        </div>
+        <div class = "face back" >
+            <h2>Back</h2>
+        </div>
+    </div>
+</section>
+
+<!-- -----------------------------3D flip card --------------------------->
+<!-- -----------------------------Togglle Menu --------------------------->
 <div class="burger-container">
+    <h2>Burger Menu Button</h2>
     <div class="menu-btn" onclick="menuToggle()">
        <div class="menu-btn__burger"></div>
      </div>
 </div>
+
+<!-- -----------------------------sEARCH bOX --------------------------->
+<section >
+    <div class="search-box" id="search-box">
+        <div id="search-input">
+            <input type = "search" placeholder = "search">
+        </div>
+        <div id="search-icon">
+            <img src = "icons8-search.png" /> 
+        </div>
+    </div>
+</section>
+
+
 
 <!-- -----------------SIGNUP-------------------------------------- -->
 <div class = "Signup">
@@ -79,7 +107,32 @@
 </div>
 <!-- -----------------Background BLEND-------------------------------------- -->
 <br/>
-
+<main class="page-content">
+    <div class="card">
+        <div class="content">
+            <h2 class="title">Mountain View</h2>
+            <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p><button class="btn">View Trips</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2 class="title">To The Beach</h2>
+            <p class="copy">Plan your next beach trip with these fabulous destinations</p><button class="btn">View Trips</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2 class="title">Desert Destinations</h2>
+            <p class="copy">It's the desert you've always dreamed of</p><button class="btn">Book Now</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2 class="title">Explore The Galaxy</h2>
+            <p class="copy">Seriously, straight up, just blast off into outer space today</p><button class="btn">Book Now</button>
+        </div>
+    </div>
+</main>
     <script src = "home.js"></script>
 
 </body>
